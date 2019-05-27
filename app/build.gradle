@@ -17,11 +17,12 @@ android {
     compileSdkVersion 23
     buildToolsVersion '28.0.3'
     defaultConfig {
+        def env = System.getenv()
         applicationId "com.avjindersinghsekhon.minimaltodo"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 3
-        versionName "1.2"
+        versionCode env['BUILD_NUMBER']
+        versionName "1." + env['BUILD_NUMBER']
     }
     buildTypes {
         release {
