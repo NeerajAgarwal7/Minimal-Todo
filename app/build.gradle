@@ -21,7 +21,7 @@ android {
         applicationId "com.avjindersinghsekhon.minimaltodo"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode env['BUILD_NUMBER']
+        versionCode 3
         versionName "1." + env['BUILD_NUMBER']
     }
     buildTypes {
