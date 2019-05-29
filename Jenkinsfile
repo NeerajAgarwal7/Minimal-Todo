@@ -27,7 +27,6 @@ node {
         //sh "echo $ANDROID_HOME"
         sh "./gradlew clean"
         sh "./gradlew build"
-        sh "rm *.apk"
         sh "sudo cp app/build/outputs/apk/debug/*.apk ."
     }
     
