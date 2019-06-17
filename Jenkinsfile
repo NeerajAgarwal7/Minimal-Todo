@@ -50,8 +50,8 @@ node {
     ], debugMode: false, failGracefully: false
    }
    
-   stage('Email'){
-       emailext body: "Click the link to download the app $HOCKEYAPP_INSTALL_URL_0", subject: 'Build Success', to: 'neerajgrwl7@gmail.com'
+   stage('Slack'){
+       slackSend color: 'good', message: 'Click the link to download the app $HOCKEYAPP_INSTALL_URL_0'
    }
    
 }
