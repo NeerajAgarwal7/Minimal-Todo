@@ -1,4 +1,5 @@
 node {
+    try {
     stage('Preparation') { // for display purposes
         // Get some code from a GitHub repository
         git 'https://github.com/NeerajAgarwal7/Minimal-Todo.git'
@@ -53,5 +54,11 @@ node {
    stage('Slack'){
        slackSend color: 'good', message: "Click the link to download the app ${HOCKEYAPP_INSTALL_URL_0}"
    }
+    }
+        catch() {
+            slackSend color: 'bad', message: "Build failure"
+        }
+            
+            
    
 }
