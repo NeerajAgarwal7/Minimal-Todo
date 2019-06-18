@@ -55,10 +55,8 @@ node {
        slackSend color: 'good', message: "Click the link to download the app ${HOCKEYAPP_INSTALL_URL_0}"
    }
     }
-        catch() {
-            slackSend color: 'bad', message: "Build failure"
-        }
-            
-            
+    catch(){
+        slackSend color: 'bad', message: "Build failed"
+    }
    
 }
